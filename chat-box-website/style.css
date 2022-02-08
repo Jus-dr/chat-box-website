@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    
+
+}
+html,
+body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.chat {
+    height: 100%;
+    display: flex;
+}
+.chat .sidebar {
+    width: 18.75rem;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+}
+.chat .content {
+    flex: 1;
+}
+.chat .sidebar .search {
+    background-color: #eee;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    
+}
+.chat .sidebar .search #search-form {
+    height: 2rem;
+    width: 90%;
+    border-radius: 25px;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    
+}
+.chat .sidebar .search #search-form:focus {
+    outline: none;
+    
+}
+.chat .sidebar .search i {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   padding-top: 0.6rem;
+   color: rgb(168, 166, 166);
+}
+.contacts {
+    width: 18.75rem;
+    overflow: auto;
+    background-color: #eee;
+}
+.chat .sidebar .contacts ul li a {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 0 10px;
+}
+.chat .sidebar .contacts ul li a:hover {
+    background-color: #fff;
+}
+.chat .sidebar .contacts ul li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+.chat .sidebar .contacts ul li {
+    border-bottom: 1px solid #ddd;
+}
+.chat .sidebar .contacts ul li a .name {
+    color: black;
+    font-weight: 500;
+}
+.chat .sidebar .contacts ul li a .message {
+    color: black;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+.chat .content {
+    display: flex;
+    flex-direction: column;
+}
+.chat .content .message-header {
+    width: 100%;
+    height: 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+.chat .content .message-header .texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.chat .content .message-header .texts .name {
+    font-weight:600;
+    font-size: 0.9rem;
+}
+.chat .content .message-header .texts .last-seen{
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+.chat .content .message-header .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 1rem;
+    
+}
+.chat .content .message-header .buttons i {
+    font-size: 1.3rem;
+    color: rgb(124, 124, 124);
+
+}
+.chat .content .message-header .buttons i:hover {
+    color: rgb(80, 80, 80);
+}
+.chat .content .message-header .buttons a {
+    margin-right: 1rem;
+}
+.chat .content .message-content {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+}
+.chat .content .message-content .our-message{
+    height: auto;
+    background-color: rgb(99, 147, 219);
+    margin-top: 1rem;
+    text-align: right;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 0.85rem;
+    align-self: flex-end;
+    margin-left: 10px;
+
+}
+
+.chat .content .message-content .their-message{
+
+    height: auto;
+    background-color: #eee;
+    margin-top: 1rem;
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    margin-right: 10px;
+}
+.chat .content .message-form {
+    border-top: 1px solid #ddd;
+}
+.chat .content .message-form ul{
+    display: flex;
+    align-items: center;
+
+}
+.chat .content .message-form ul li {
+    padding: 0.3rem;
+}
+.chat .content .message-form ul li.input {
+    flex: 1;
+}
+.chat .content .message-form ul li.input input {
+    width: 100%;
+}
+.chat .content .message-form ul li i {
+    font-size: 1.1rem;
+
+}
+.chat .content .message-form ul li .fa-laugh {
+    padding: 0.6rem;
+    background-color: #339af0;
+    color: white;
+    border-radius: 20px;
+    
+}
+.chat .content .message-form ul li .fa-microphone {
+    padding: 0.6rem;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 20px;
+    
+}
+.chat .content .message-form ul li .fa-image {
+    padding: 0.6rem;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 20px;
+    
+}
+.chat .content .message-form ul .input .text-form {
+    border-radius: 25px;
+    height: 2rem;
+    padding-left: 0.4rem;
+    border: 1px solid #ddd;
+}
+
+.chat .content .message-form ul .input .text-form:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .chat .content .message-form ul li .fa-laugh {
+        padding: 0.2rem;
+        background-color: #339af0;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-form ul li .fa-microphone {
+        padding: 0.2rem;
+        background-color: #ff5722;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-form ul li .fa-image {
+        padding: 0.2rem;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-header .texts .name {
+        font-weight:600;
+        font-size: 0.8rem;
+    }
+    .chat .content .message-header .texts .last-seen{
+        font-size: 0.6rem;
+        opacity: 0.5;
+    }
+}
+@media only screen and (max-width:600px) {
+    .chat .content .message-form ul li .fa-laugh {
+        padding: 0.2rem;
+        background-color: #339af0;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-form ul li .fa-microphone {
+        padding: 0.2rem;
+        background-color: #ff5722;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-form ul li .fa-image {
+        padding: 0.2rem;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 20px;
+        
+    }
+    .chat .content .message-header .texts .name {
+        font-weight:600;
+        font-size: 0.8rem;
+    }
+    .chat .content .message-header .texts .last-seen{
+        font-size: 0.6rem;
+        opacity: 0.5;
+    }
+}
